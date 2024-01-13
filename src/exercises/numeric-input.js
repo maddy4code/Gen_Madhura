@@ -22,15 +22,13 @@ const NumericInput = {
   init: () => {
     document.querySelectorAll('.c-numeric-input').forEach(elem => {
       console.log('TODO: Please see the above requirement for numeric input');
-      elem.addEventListener('blur', (event) => {
-      
+      elem.addEventListener('blur', (event) => {      
       const value = event.target.value;
       const parsedVal= parseFloat(value);
       if(!parsedVal && value != "")
       {
         elem.classList.add('c-numeric-input-error')
         elem.classList.remove('c-numeric-input-valid','c-numeric-input');
-       // event.target.value = '';
       }
       else if(parsedVal){
         elem.classList.add('c-numeric-input-valid')
@@ -42,8 +40,6 @@ const NumericInput = {
         elem.classList.add('c-numeric-input');
         event.target.value ="";
       }
-
-
     });
   })
 }

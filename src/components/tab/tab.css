@@ -9,3 +9,13 @@
 .c-tab--content > .c-tab--active {
     display: block;
 }
+.c-numeric-input-error{
+    border: 3px solid #ea2e2e;   
+}
+
+.c-numeric-input-valid{
+    border: 3px solid #279f27;  
+}
+.c-numeric-input{
+    border :3px solid #ccc;
+}

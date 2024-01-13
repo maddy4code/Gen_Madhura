@@ -38,6 +38,10 @@ describe('Calculate Relative Date', () => {
     const actual = calculateRelativeDate(testYear+" "+testMonth+" "+(parseInt(testDate)-7));
     expect(actual).to.equal("Last week");
   });
+  it('Last week but different date', ()=>{
+    const actual = calculateRelativeDate(testYear+" "+testMonth+" "+(parseInt(testDate)-9));
+    expect(actual).to.equal("Last week");
+  });
   it('This year', ()=>{
     const actual = calculateRelativeDate(testYear+" "+12 + " " +31);
     expect(actual).to.equal("This year");
