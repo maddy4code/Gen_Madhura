@@ -7,5 +7,5 @@
     { "id": 105, "name": "Apple - AirPods with Charging Case", "link": "#/products/105"},
     { "id": 106, "name": "iRobot - Roomba i7+ Wi-Fi", "link": "#/products/106"}
   ],
-  "cart": [{"id": 101},{"id": 102},{"id": 103}]
+  "cart": [{"id": 101},{"id": 102},{"id": 103}, {"id": 105}]
 }

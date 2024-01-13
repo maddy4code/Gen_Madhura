@@ -14,11 +14,33 @@
 * 1002   iPad
 *
 * */
+
+
 const View = {
   init: () => {
     const tbodyElem = document.getElementById('shopping-cart-tbl').querySelector('tbody');
-
-    console.log('TODO: Please see the above requirement');
+     
+     fetch('../../db/db.json')
+     .then((response) => response.json())
+     .then((json) => {
+    
+      let cartItems = json.cart;
+      
+      cartItems.forEach(item => {
+        const row = document.createElement('tr');
+        const idCell = document.createElement('td');
+        const nameCell = document.createElement('td');
+    
+        idCell.textContent =  json.products.find(x => x.id === item.id).id ; 
+        nameCell.textContent = json.products.find(x => x.id === item.id).name;
+        row.appendChild(idCell);
+        row.appendChild(nameCell);
+    
+        tbodyElem.appendChild(row);
+      });
+    });
+   
+    //console.log('TODO: Please see the above requirement' );
   }
 };
 document.addEventListener('DOMContentLoaded', View.init);
